@@ -10,7 +10,8 @@ return array(
 		),
 
 	'repositories' => array(
-			'mavidurak-cli-php'
+			'mavidurak-cli-php',
+            'webhooks'
 		)
 	
 );

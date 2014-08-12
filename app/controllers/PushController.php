@@ -51,7 +51,7 @@ class PushController extends BaseController {
 	*/
 	private function getPayload()
 	{
-		$payload = json_decode(Input::get('payload'));
+		$payload = json_decode(Input::all());
 		if ($payload === null || $this->testAccess($payload)) {
 			throw new Exception();
 		}

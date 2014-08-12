@@ -1,5 +1,5 @@
 {
-	"name": "laravel/laravel",
+    "name": "laravel/laravel",
     "description": "Mavidurak Webhooks",
     "keywords": ["mavidurak", "webhooks", "twitter"],
     "license": "MIT",
@@ -10,38 +10,38 @@
             "role": "Creator & Designer"
         }
     ],
-	"require": {
-		"laravel/framework": "4.2.*",
-		"thujohn/twitter": "dev-master"
-	},
-	"autoload": {
-		"classmap": [
-			"app/commands",
-			"app/controllers",
-			"app/models",
-			"app/database/migrations",
-			"app/database/seeds",
-			"app/tests/TestCase.php"
-		],
-		"psr-4": {
+    "require": {
+        "laravel/framework": "4.2.*",
+        "thujohn/twitter": "dev-master"
+    },
+    "autoload": {
+        "classmap": [
+            "app/commands",
+            "app/controllers",
+            "app/models",
+            "app/database/migrations",
+            "app/database/seeds",
+            "app/tests/TestCase.php"
+        ],
+        "psr-4": {
             "Mavidurak\\GitHub\\": "app/mavidurak/github/"
-        }		
-	},
-	"scripts": {
-		"post-install-cmd": [
-			"php artisan clear-compiled",
-			"php artisan optimize"
-		],
-		"post-update-cmd": [
-			"php artisan clear-compiled",
-			"php artisan optimize"
-		],
-		"post-create-project-cmd": [
-			"php artisan key:generate"
-		]
-	},
-	"config": {
-		"preferred-install": "dist"
-	},
-	"minimum-stability": "stable"
+        }       
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "php artisan clear-compiled",
+            "php artisan optimize"
+        ],
+        "post-update-cmd": [
+            "php artisan clear-compiled",
+            "php artisan optimize"
+        ],
+        "post-create-project-cmd": [
+            "php artisan key:generate"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "stable"
 }

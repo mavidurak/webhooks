@@ -33,9 +33,9 @@ class PushController extends BaseController {
 		{
 			$payload = $this->getPayload();
 			$this->twitter->testTweet((object) array(
-				'login' => $payload->head_commit->committer->username,
-				'name' => $payload->head_commit->committer->name,
-				'repo_name' => $payload->repository->name
+				'login' => $payload['head_commit']['committer']['username'],
+				'name' => $payload['head_commit']['committer']['name'],
+				'repo_name' => $payload['repository']['name']
 			));
 		} 
 		catch (Exception $e) 
@@ -51,7 +51,7 @@ class PushController extends BaseController {
 	*/
 	private function getPayload()
 	{
-		$payload = (object) Input::all();
+		$payload = Input::all();
 		if ($payload === null || $this->testAccess($payload)) {
 			throw new Exception();
 		}
@@ -67,7 +67,7 @@ class PushController extends BaseController {
 	private function testAccess($payload)
 	{
 		return !in_array(
-				$payload->repository->name, 
+				$payload['repository']['name'], 
 				Config::get('api.repositories')
 			);	
 	}

@@ -19,7 +19,8 @@ return array(
     'repositories' => array(
             'mavidurak-cli-php',
             'webhooks',
-            'docs-git'
+            'docs-git',
+            'declaration'
         )
     
 );

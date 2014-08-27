@@ -39,6 +39,7 @@ class Twitter implements Interfaces\TwitterInterface {
 	 			'status' => $tweet, 
 	 			'format' => 'json'
 	 		));		
+	 		echo "Durum güncellendi: $tweet";
 		}
 	}
 
@@ -68,8 +69,13 @@ class Twitter implements Interfaces\TwitterInterface {
 	private function getTwitterUsername($login)
 	{
  		$username = Config::get("api.users.{$login}.twitter");
- 		if ($username !== null) {
+ 		if ($username !== null) 
+ 		{
  			$username = '@'.$username;
+ 		} 
+ 		else 
+ 		{
+ 			$username = $login;
  		}
 		return $username;		
 	}

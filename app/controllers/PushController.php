@@ -41,6 +41,7 @@ class PushController extends BaseController {
 		catch (Exception $e) 
 		{
 			Log::error($e->getMessage());
+			echo "Hata: ".$e->getMessage();
 		}
 	}
 
@@ -53,7 +54,7 @@ class PushController extends BaseController {
 	{
 		$payload = Input::all();
 		if ($payload === null || $this->testAccess($payload)) {
-			throw new Exception();
+			throw new Exception('Geçersiz repo tanımlaması.');
 		}
 		return $payload;
 	}

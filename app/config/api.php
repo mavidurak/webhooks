@@ -20,7 +20,8 @@ return array(
             'mavidurak-cli-php',
             'webhooks',
             'docs-git',
-            'declaration'
+            'declaration',
+            'askMeBaby'
         )
     
 );

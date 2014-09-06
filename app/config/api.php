@@ -21,7 +21,8 @@ return array(
             'webhooks',
             'docs-git',
             'declaration',
-            'askMeBaby'
+            'askMeBaby',
+            'mavidurak.github.io'
         )
     
 );
